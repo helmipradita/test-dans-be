@@ -1,0 +1,415 @@
+{
+    "info": {
+        "name": "test-dans",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "users",
+            "item": [
+                {
+                    "name": "register",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/users/register",
+                            "path": [
+                                "register"
+                            ],
+                            "host": [
+                                "users"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "Helmi Pradita",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "helmipraditaa@gmail.com",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "085708572498",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "123456",
+                                    "type": "default"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "verification",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/users/verification",
+                            "path": [
+                                "verification"
+                            ],
+                            "host": [
+                                "users"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "helmipraditaa@gmail.com",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "123456",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "otp",
+                                    "value": "463769",
+                                    "type": "default"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/users/login",
+                            "path": [
+                                "login"
+                            ],
+                            "host": [
+                                "users"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "email",
+                                    "value": "helmipraditaa@gmail.com",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "123456",
+                                    "type": "default"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "profile",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "/users",
+                            "host": [
+                                "users"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg4NjYxMjQsImV4cCI6MTY3ODg2OTcyNH0.1Kla7gJEBf_oQo7ndduZwjYkELymomwPqsexXsI1eUM",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "update",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "/users/profile",
+                            "path": [
+                                "profile"
+                            ],
+                            "host": [
+                                "users"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "Helmi Pradita update",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "helmipraditaa@gmail.com",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "08571234",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "photo",
+                                    "src": "/home/helmi/Pictures/sabuk jeans.png",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg4NjYxMjQsImV4cCI6MTY3ODg2OTcyNH0.1Kla7gJEBf_oQo7ndduZwjYkELymomwPqsexXsI1eUM",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "jobs",
+            "item": [
+                {
+                    "name": "get all",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "/jobs",
+                            "host": [
+                                "jobs"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg5MDk5OTAsImV4cCI6MTY3ODkxMzU5MH0.JzE74igJEW_Oy1985FZN_34zcKkph7_FnSManFKVCsA",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "get by id",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "/jobs/0ebcf82d-9e07-497e-be97-b4fcefa77005",
+                            "path": [
+                                "0ebcf82d-9e07-497e-be97-b4fcefa77005"
+                            ],
+                            "host": [
+                                "jobs"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg4NzA5NzEsImV4cCI6MTY3ODg3NDU3MX0.l49kkbmaRe6aepjcKxSC_hYF5xVjV6RotM1JkGVNsAI",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "add",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "/jobs",
+                            "host": [
+                                "jobs"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "type",
+                                    "value": "Full Time",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "url",
+                                    "value": "https://jobs.github.com/positions/32bf67e5-4971-47ce-985c-44b6b3860cdb",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "SweetRush New",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "company_url",
+                                    "value": "https://www.sweetrush.com/",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "location",
+                                    "value": "Shcwerin",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "title",
+                                    "value": "Senior Creative Front End Web Developer",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "SweetRush has an exciting html",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "how_to_apply",
+                                    "value": "asdadad",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "company_logo",
+                                    "src": "/home/helmi/Pictures/baju wanita putih.png",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg4NzA5NzEsImV4cCI6MTY3ODg3NDU3MX0.l49kkbmaRe6aepjcKxSC_hYF5xVjV6RotM1JkGVNsAI",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "edit",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "/jobs/4721c200-f5cd-4b9a-b31c-d88ebc3ff24c",
+                            "path": [
+                                "4721c200-f5cd-4b9a-b31c-d88ebc3ff24c"
+                            ],
+                            "host": [
+                                "jobs"
+                            ]
+                        },
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "type",
+                                    "value": "Part Time",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "url",
+                                    "value": "https://jobs.github.com/positions/32bf67e5-4971-47ce-985c-44b6b3860cdb",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "company",
+                                    "value": "PT Helmi",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "company_url",
+                                    "value": "https://www.sweetrush.com/",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "location",
+                                    "value": "Shcwerin",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "title",
+                                    "value": "Senior Creative Front End Web Developer",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "SweetRush has an exciting html",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "how_to_apply",
+                                    "value": "asdadad",
+                                    "type": "default"
+                                },
+                                {
+                                    "key": "company_logo",
+                                    "src": "/home/helmi/Pictures/baju wanita putih.png",
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg4NzA5NzEsImV4cCI6MTY3ODg3NDU3MX0.l49kkbmaRe6aepjcKxSC_hYF5xVjV6RotM1JkGVNsAI",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "/jobs/92fe8a02-8501-4a31-989f-e8b98df59472",
+                            "path": [
+                                "92fe8a02-8501-4a31-989f-e8b98df59472"
+                            ],
+                            "host": [
+                                "jobs"
+                            ]
+                        },
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUyZDk3MWRjLTJmZGYtNGQ5Zi1hZmEzLTg5OGYwNGM1YjE0ZSIsImVtYWlsIjoiaGVsbWlwcmFkaXRhYUBnbWFpbC5jb20iLCJpYXQiOjE2Nzg4NzA5NzEsImV4cCI6MTY3ODg3NDU3MX0.l49kkbmaRe6aepjcKxSC_hYF5xVjV6RotM1JkGVNsAI",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
